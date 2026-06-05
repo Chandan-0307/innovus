@@ -1,0 +1,1156 @@
+                          CONFORMAL (R)
+                   Version 20.20-s200 (01-Feb-2021) (64 bit executable)
+   Copyright (c) Cadence Design Systems, Inc., 1997-2020. All Rights Reserved
+
+
+This program is proprietary and confidential information belonging to
+Cadence Design Systems, Inc., and may be used and disclosed only as authorized
+in a license agreement controlling such use and disclosure.
+
+// Warning: This version is 1948 days old. You can download the latest version from http://downloads.cadence.com.
+
+0
+// Command: usage -auto -elapse
+// Command: usage -auto -elapse
+CPU time     : 1.68    seconds
+Elapse time  : 8       seconds
+Memory usage : 80.29   M bytes
+0
+// Command: set_verification_information fv_map_a23_decode_mv_db
+// Command: set_verification_information fv_map_a23_decode_mv_db
+// Verification information is set to /home/vvtrainee43/Desktop/chandan/lec/amber_lvt_250/work2/fv_map_a23_decode_mv_db.
+// Advanced reporting is enabled and the output is written to /home/vvtrainee43/Desktop/chandan/lec/amber_lvt_250/work2/fv_map_a23_decode_mv_db
+0
+// Command: read_implementation_information fv/a23_decode -golden fv_map -revised a23_decode_mv
+// Command: read_implementation_information fv/a23_decode -golden fv_map -revised a23_decode_mv
+// Reading implementation information from fv/a23_decode ...
+================================================================================
+          Information Category                         Count
+--------------------------------------------------------------------------------
+     Sequential instance phase                           734
+       Sequential optimization                             0
+        Sequential duplication                             0
+         Boundary optimization                             0
+            Synthesis equation                             0
+    Combinational loop breaker                             0
+                       Mapping                             0
+================================================================================
+// Note: Read implementation information successfully.
+0
+// Command: set_parallel_option -threads 4 -license "xl lp gxl lpgxl eco ecogxl" -norelease_license
+// Command: set_parallel_option -threads 4 -license {xl lp gxl lpgxl eco ecogxl} -norelease_license
+// Number of threads is set to 4,4.
+0
+// Command: set env(RC_VERSION)     "17.22-s017_1"
+17.22-s017_1
+// Command: set env(CDN_SYNTH_ROOT) "/tools/cadence/GENUS172/tools.lnx86"
+/tools/cadence/GENUS172/tools.lnx86
+// Command: set CDN_SYNTH_ROOT      "/tools/cadence/GENUS172/tools.lnx86"
+/tools/cadence/GENUS172/tools.lnx86
+// Command: set env(CW_DIR) "/tools/cadence/GENUS172/tools.lnx86/lib/chipware"
+/tools/cadence/GENUS172/tools.lnx86/lib/chipware
+// Command: set CW_DIR      "/tools/cadence/GENUS172/tools.lnx86/lib/chipware"
+/tools/cadence/GENUS172/tools.lnx86/lib/chipware
+// Command: set_undefined_cell black_box -noascend -both
+// Command: set_undefined_cell black_box -noascend -both
+0
+// Command: add_search_path /home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/lvt_lib -library -both
+// Command: add_search_path /home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/lvt_lib -library -both
+0
+// Command: read_library -liberty -both   /home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/lvt_lib/slow.lib /home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/lvt_lib/slow_vdd1v0_basicCells_lvt.lib
+// Command: read_library -liberty -both /home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/lvt_lib/slow.lib /home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/lvt_lib/slow_vdd1v0_basicCells_lvt.lib
+// Parsing file /home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/lvt_lib/slow.lib ...
+// Parsing file /home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/lvt_lib/slow_vdd1v0_basicCells_lvt.lib ...
+// Warning: (RTL9.16) Duplicated operating_condition, the second one is ignored (occurrence:1)
+// Warning: (RTL9.17) Cell doesn't have any output pins or all output pins are undriven (blackboxed) (occurrence:11)
+// Note: (RTL9.26) Liberty pin with internal_node use default input_map (occurrence:32)
+// Note: Read Liberty library successfully
+0
+CPU time     : 2.54    seconds
+Elapse time  : 10      seconds
+Memory usage : 111.00  M bytes
+// Command: read_design -verilog95   -golden -lastmod -noelab fv/a23_decode/fv_map.v.gz
+// Command: read_design -verilog95 -golden -lastmod -noelab fv/a23_decode/fv_map.v.gz
+// Parsing file fv/a23_decode/fv_map.v.gz ...
+0
+CPU time     : 2.70    seconds
+Elapse time  : 10      seconds
+Memory usage : 121.18  M bytes
+// Command: elaborate_design -golden -root {a23_decode}
+// Command: elaborate_design -golden -root a23_decode
+// Golden root module is set to 'a23_decode'
+0
+CPU time     : 2.83    seconds
+Elapse time  : 11      seconds
+Memory usage : 119.77  M bytes
+// Command: read_design -verilog95   -revised -lastmod -noelab outputs_250MHz_lvt_65_35_0/a23_decode_m.v
+// Command: read_design -verilog95 -revised -lastmod -noelab outputs_250MHz_lvt_65_35_0/a23_decode_m.v
+// Parsing file outputs_250MHz_lvt_65_35_0/a23_decode_m.v ...
+0
+CPU time     : 3.03    seconds
+Elapse time  : 11      seconds
+Memory usage : 126.85  M bytes
+// Command: elaborate_design -revised -root {a23_decode}
+// Command: elaborate_design -revised -root a23_decode
+// Revised root module is set to 'a23_decode'
+// Warning: (RTL14) Signal has input but it has no output (occurrence:1)
+0
+CPU time     : 3.17    seconds
+Elapse time  : 11      seconds
+Memory usage : 126.24  M bytes
+// Command: report_design_data
+// Command: report_design_data
+============================================
+Summary           Golden         Revised
+============================================
+Design-modules         1               1
+Library-cells       2730            3870
+============================================
+Primitives      Golden              Revised
+============================================
+INPUT               88                   88
+OUTPUT             269                  269
+--------------------------------------------
+AND        *       780                  809
+BUF        *       413                 1288
+DFF                367                  367
+INV        *      1285                 1442
+NAND       *       631                  673
+NOR        *       531                  620
+OR         *       734                  768
+WIRE       *        12                    0
+XNOR       *        13                   10
+XOR        *         4                    6
+--------------------------------------------
+Total             4770                 5983
+
+0
+// Command: report_black_box
+// Command: report_black_box
+0
+// Command: set_flatten_model -seq_constant
+// Command: set_flatten_model -seq_constant
+0
+// Command: set_flatten_model -seq_constant_x_to 0
+// Command: set_flatten_model -seq_constant_x_to 0
+0
+// Command: set_flatten_model -nodff_to_dlat_zero
+// Command: set_flatten_model -nodff_to_dlat_zero
+0
+// Command: set_flatten_model -nodff_to_dlat_feedback
+// Command: set_flatten_model -nodff_to_dlat_feedback
+0
+// Command: set_flatten_model -hier_seq_merge
+// Command: set_flatten_model -hier_seq_merge
+0
+// Command: set_analyze_option -auto
+// Command: set_analyze_option -auto
+0
+// Command: set_system_mode lec
+// Command: set_system_mode lec
+// Processing Golden ...
+// Modeling Golden ...
+// Processing Revised ...
+// Modeling Revised ...
+// Balanced modeling (auto) mapped 734 out of 734 DFF/DLATs
+CPU time     : 3.91    seconds
+Elapse time  : 12      seconds
+Memory usage : 141.85  M bytes
+// Mapping key points ...
+================================================================================
+Mapped points: SYSTEM class
+--------------------------------------------------------------------------------
+Mapped points     PI     PO     DFF       Total   
+--------------------------------------------------------------------------------
+Golden            88     269    367       724     
+--------------------------------------------------------------------------------
+Revised           88     269    367       724     
+================================================================================
+CPU time     : 4.20    seconds
+Elapse time  : 13      seconds
+Memory usage : 142.30  M bytes
+// Running automatic setup...
+// Automatic setup finished.
+0
+CPU time     : 4.60    seconds
+Elapse time  : 13      seconds
+Memory usage : 142.82  M bytes
+// Command: report_unmapped_points -summary
+// Command: report_unmapped_points -summary
+There is no unmapped point
+0
+// Command: report_unmapped_points -extra -unreachable -notmapped
+// Command: report_unmapped_points -extra -unreachable -notmapped
+There is no unmapped point
+0
+// Command: add_compared_points -all
+// Command: add_compared_points -all
+// 636 compared points added to compare list
+0
+// Command: compare
+// Command: compare
+================================================================================
+Compared points      PO     DFF       Total   
+--------------------------------------------------------------------------------
+Equivalent           269    367       636     
+================================================================================
+0
+CPU time     : 8.48    seconds
+Elapse time  : 18      seconds
+Memory usage : 145.30  M bytes
+// Command: report_compare_data -class nonequivalent -class abort -class notcompared
+// Command: report_compare_data -class nonequivalent -class abort -class notcompared
+0 Non-equivalent point(s) reported
+0 Abort point(s) reported
+0 Not-compared point(s) reported
+0 compared point(s) reported
+================================================================================
+Compared points      PO     DFF       Total   
+--------------------------------------------------------------------------------
+Equivalent           269    367       636     
+================================================================================
+0
+// Command: report_verification -verbose
+// Command: report_verification -verbose
+================================================================================
+                            Verification Report
+--------------------------------------------------------------------------------
+Category                                                                  Count
+--------------------------------------------------------------------------------
+1. Non-standard modeling options used:                                      0
+     Tri-stated output:                                        checked
+     Revised X signals set to E:                               yes
+     Floating signals tied to Z:                               yes
+     Command "add clock" for clock-gating:                     not used
+--------------------------------------------------------------------------------
+2. Incomplete verification:                                                 0
+     All primary outputs are mapped:                           yes
+     Not-mapped DFF/DLAT is detected:                          no
+     All mapped points are added as compare points:            yes
+     All compared points are compared:                         yes
+     User added black box:                                     no
+     Black box mapped with different module name:              no
+     Empty module is not black boxed:                          no
+     Command "add ignore outputs" used:                        no
+     Always false constraints detected:                        no
+--------------------------------------------------------------------------------
+3. User modification to design:                                             0
+     Change gate type:                                         no
+     Change wire:                                              no
+     Primary input added by user:                              no
+--------------------------------------------------------------------------------
+4. Conformal Constraint Designer clock domain crossing checks recommended:  0
+     Multiple clocks in the design:                            no
+--------------------------------------------------------------------------------
+5. Design ambiguity:                                                        0
+     Duplicate module definition:                              no
+     Black box due to undefined cells:                         no
+     Golden design has abnormal ratio of unreachable gates:    no
+     Ratio of golden unreachable gates:                        0%
+     Revised design has abnormal ratio of unreachable gates:   no
+     Ratio of revised unreachable gates:                       0%
+     All primary input bus ordering is consistent:             yes
+     All primary output bus ordering is consistent:            yes
+     DFF/DLAT not compared due to disabled clock port(s):        0
+--------------------------------------------------------------------------------
+6. Compare Results:                                                        PASS
+     Number of EQ compare points:                              636
+     Number of NON-EQ compare points:                          0
+     Number of Aborted compare points:                         0
+     Number of Uncompared compare points :                     0
+================================================================================
+pass
+// Command: report_statistics
+// Command: report_statistics
+Mapping and compare statistics
+================================================================================
+                     Compare Result       Golden            Revised
+--------------------------------------------------------------------------------
+Root module name                          a23_decode        a23_decode        
+
+Primary inputs                                88                 88
+   Mapped                                     88                 88
+
+Primary outputs                              269                269
+   Mapped                                    269                269
+      Equivalent                269
+
+State key points                             367                367
+   Mapped                                    367                367
+      Equivalent                367
+================================================================================
+0
+// Command: write_verification_information
+// Command: write_verification_information
+// Verification information is written to fv_map_a23_decode_mv_db.
+0
+// Command: report_verification_information
+// Command: report_verification_information
+// Generating reports on verification information at /home/vvtrainee43/Desktop/chandan/lec/amber_lvt_250/work2/fv_map_a23_decode_mv_db...
+LEC run scores:
+================================================================================
+Step                Score     Range          
+--------------------------------------------------------------------------------
+result_status       10        10             
+runtime             10        10             
+mapping             10        10             
+sequential_constant 5         10             
+sequential_merge    5         10             
+sequential_phase    10        10             
+datapath_analysis   5         10             
+combinational_loop  5         10             
+mismatch_detection  5         10             
+overall             65        90             
+================================================================================
+LEC results versus attributes:
+================================================================================
+Attribute           Total     Inconsistency  Combined Table                
+--------------------------------------------------------------------------------
+sequential_constant 0         0                                            
+sequential_merge    0         0                                            
+sequential_phase    367       0              sequential_phase.json         
+================================================================================
+The tables can be viewed directly using web interface.
+// Done with reporting verification information.
+0
+// Command: if {![is_pass]} {
+//              error "// ERROR: Compare was not equivalent."
+//          }
+// Command: reset
+// Command: reset
+// Warning: Reset the system and deleting all design data
+// Warning: Existing golden design has been deleted
+// Warning: Existing golden library has been deleted
+// Warning: Existing revised design has been deleted
+// Warning: Existing revised library has been deleted
+0
+CPU time     : 8.82    seconds
+Elapse time  : 20      seconds
+Memory usage : 148.18  M bytes
+// Command: set_verification_information rtl_fv_map_db
+// Command: set_verification_information rtl_fv_map_db
+// Verification information is set to /home/vvtrainee43/Desktop/chandan/lec/amber_lvt_250/work2/rtl_fv_map_db.
+// Advanced reporting is enabled and the output is written to /home/vvtrainee43/Desktop/chandan/lec/amber_lvt_250/work2/rtl_fv_map_db
+0
+// Command: read_implementation_information fv/a23_decode -revised fv_map
+// Command: read_implementation_information fv/a23_decode -revised fv_map
+// Reading implementation information from fv/a23_decode ...
+================================================================================
+          Information Category                         Count
+--------------------------------------------------------------------------------
+     Sequential instance phase                           367
+       Sequential optimization                            17
+        Sequential duplication                             0
+         Boundary optimization                             0
+            Synthesis equation                             0
+    Combinational loop breaker                             0
+                       Mapping                             0
+================================================================================
+// Note: Read implementation information successfully.
+0
+// Command: set_parallel_option -threads 4 -license "xl lp gxl lpgxl eco ecogxl" -norelease_license
+// Command: set_parallel_option -threads 4 -license {xl lp gxl lpgxl eco ecogxl} -norelease_license
+// Number of threads is set to 4,4.
+0
+// Command: set env(RC_VERSION)     "17.22-s017_1"
+17.22-s017_1
+// Command: set env(CDN_SYNTH_ROOT) "/tools/cadence/GENUS172/tools.lnx86"
+/tools/cadence/GENUS172/tools.lnx86
+// Command: set CDN_SYNTH_ROOT      "/tools/cadence/GENUS172/tools.lnx86"
+/tools/cadence/GENUS172/tools.lnx86
+// Command: set env(CW_DIR) "/tools/cadence/GENUS172/tools.lnx86/lib/chipware"
+/tools/cadence/GENUS172/tools.lnx86/lib/chipware
+// Command: set CW_DIR      "/tools/cadence/GENUS172/tools.lnx86/lib/chipware"
+/tools/cadence/GENUS172/tools.lnx86/lib/chipware
+// Command: set_undefined_cell black_box -noascend -both
+// Command: set_undefined_cell black_box -noascend -both
+0
+// Command: add_search_path /home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/lvt_lib -library -both
+// Command: add_search_path /home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/lvt_lib -library -both
+0
+// Command: read_library -liberty -both   /home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/lvt_lib/slow.lib /home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/lvt_lib/slow_vdd1v0_basicCells_lvt.lib
+// Command: read_library -liberty -both /home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/lvt_lib/slow.lib /home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/lvt_lib/slow_vdd1v0_basicCells_lvt.lib
+// Parsing file /home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/lvt_lib/slow.lib ...
+// Parsing file /home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/lvt_lib/slow_vdd1v0_basicCells_lvt.lib ...
+// Warning: (RTL9.16) Duplicated operating_condition, the second one is ignored (occurrence:1)
+// Warning: (RTL9.17) Cell doesn't have any output pins or all output pins are undriven (blackboxed) (occurrence:11)
+// Note: (RTL9.26) Liberty pin with internal_node use default input_map (occurrence:32)
+// Note: Read Liberty library successfully
+0
+CPU time     : 9.84    seconds
+Elapse time  : 22      seconds
+Memory usage : 154.35  M bytes
+// Command: set_undriven_signal Z -golden
+// Command: set_undriven_signal Z -golden
+0
+// Command: set_naming_style rc -golden
+// Command: set_naming_style rc -golden
+0
+// Command: set_naming_rule "%s\[%d\]" -instance_array -golden
+// Command: set_naming_rule %s[%d] -instance_array -golden
+0
+// Command: set_naming_rule "%s_reg" -register -golden
+// Command: set_naming_rule %s_reg -register -golden
+0
+// Command: set_naming_rule "%L.%s" "%L\[%d\].%s" "%s" -instance -golden
+// Command: set_naming_rule %L.%s %L[%d].%s %s -instance -golden
+0
+// Command: set_naming_rule "%L.%s" "%L\[%d\].%s" "%s" -variable -golden
+// Command: set_naming_rule %L.%s %L[%d].%s %s -variable -golden
+0
+// Command: set lec_version_required "17.20301"
+17.20301
+// Command: if {$lec_version >= $lec_version_required} {
+//              set_hdl_options -const_port_extend
+//          }
+// Command: set_hdl_options -const_port_extend
+0
+// Command: set_hdl_options -VERILOG_INCLUDE_DIR "incdir:sep:src:cwd"
+// Command: set_hdl_options -VERILOG_INCLUDE_DIR incdir:sep:src:cwd
+0
+// Command: delete_search_path -all -design -golden
+// Command: delete_search_path -all -design -golden
+0
+// Command: add_search_path /home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/rtl -design -golden
+// Command: add_search_path /home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/rtl -design -golden
+0
+// Command: read_design   -define SYNTHESIS  -merge bbox -golden -lastmod -noelab -verilog2k /home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/rtl/a23_decode.v
+// Command: read_design -define SYNTHESIS -merge bbox -golden -lastmod -noelab -verilog2k /home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/rtl/a23_decode.v
+// Parsing file /home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/rtl/a23_decode.v ...
+// Parsing file /home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/rtl/global_defines.vh ...
+// Parsing file /home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/rtl/a23_localparams.vh ...
+// Parsing file /home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/rtl/a23_functions.vh ...
+0
+CPU time     : 10.09   seconds
+Elapse time  : 23      seconds
+Memory usage : 160.09  M bytes
+// Command: elaborate_design -golden -root {a23_decode} -rootonly 
+// Command: elaborate_design -golden -root a23_decode -rootonly
+// Golden root module is set to 'a23_decode'
+// Warning: (RTL1.5a) Assignment with RHS bit width is greater than LHS bit width (occurrence:4)
+// Warning: (RTL1.5b) Potential loss of RHS msb or carry-out bit (occurrence:1)
+// Note: (RTL5.5a) Default case item with non-X assignment(s) (occurrence:4)
+// Warning: (RTL7.13) Logical operator is applied to multiple-bit operand (occurrence:1)
+// Warning: (RTL8.3) Unreachable DFF/DLAT is removed (occurrence:2)
+// Warning: (RTL14) Signal has input but it has no output (occurrence:4)
+// Warning: (RTL14.1) Fanout load of the signal is removed (occurrence:2)
+// Warning: (RTL25) Non-automatic task/function (occurrence:6)
+// Note: (VLG2.2b) Non-binary case item is used in casez statement (occurrence:39)
+// Note: (VLG9.2) The `define macro is used (occurrence:23)
+// Warning: (DIR3.1) synthesis/translate/compile on/off directive is detected (occurrence:2)
+// Warning: (DIR4.2) Design includes one or more HDL directives or pragmas that Conformal supports (occurrence:2)
+// Warning: (DIR6.2) Supported compiler directive is detected (occurrence:10)
+// Note: (DIR6.3) Conditional compiler directive clause is effective (occurrence:4)
+// Warning: (IGN1.1) Initial construct is not supported. The entire initial construct will be ignored (occurrence:62)
+// Warning: (HRC3.16) A wire is declared, but not used in the module (occurrence:4)
+0
+CPU time     : 10.27   seconds
+Elapse time  : 23      seconds
+Memory usage : 162.23  M bytes
+// Command: read_design -verilog95   -revised -lastmod -noelab fv/a23_decode/fv_map.v.gz
+// Command: read_design -verilog95 -revised -lastmod -noelab fv/a23_decode/fv_map.v.gz
+// Parsing file fv/a23_decode/fv_map.v.gz ...
+0
+CPU time     : 10.45   seconds
+Elapse time  : 24      seconds
+Memory usage : 167.10  M bytes
+// Command: elaborate_design -revised -root {a23_decode}
+// Command: elaborate_design -revised -root a23_decode
+// Revised root module is set to 'a23_decode'
+0
+CPU time     : 10.59   seconds
+Elapse time  : 24      seconds
+Memory usage : 166.24  M bytes
+// Command: uniquify -all -nolib -golden
+// Command: uniquify -all -nolib -golden
+Uniquified 0 module(s)
+0
+// Command: report_design_data
+// Command: report_design_data
+============================================
+Summary           Golden         Revised
+============================================
+Design-modules         1               1
+Library-cells        229            2730
+============================================
+Primitives      Golden              Revised
+============================================
+INPUT               88                   88
+OUTPUT             269                  269
+--------------------------------------------
+AND        *      1157                  780
+BUF        *        44                  413
+DFF        *       382                  367
+INV        *       104                 1285
+MUX        *      1533                    0
+NAND       *         3                  631
+NOR        *        83                  531
+OR         *       211                  734
+WIRE       *       183                   12
+XNOR       *         0                   13
+XOR        *        67                    4
+------ word-level --------------------------
+ADD        *        15                    0
+EQ         *         1                    0
+NE         *         1                    0
+SLL        *         1                    0
+WAND       *         1                    0
+WMUX       *       206                    0
+WSEL       *         4                    0
+--------------------------------------------
+Total             3767                 4770
+
+0
+// Command: report_black_box
+// Command: report_black_box
+0
+// Command: set_flatten_model -seq_constant
+// Command: set_flatten_model -seq_constant
+0
+// Command: set_flatten_model -seq_constant_x_to 0
+// Command: set_flatten_model -seq_constant_x_to 0
+0
+// Command: set_flatten_model -nodff_to_dlat_zero
+// Command: set_flatten_model -nodff_to_dlat_zero
+0
+// Command: set_flatten_model -nodff_to_dlat_feedback
+// Command: set_flatten_model -nodff_to_dlat_feedback
+0
+// Command: set_flatten_model -hier_seq_merge
+// Command: set_flatten_model -hier_seq_merge
+0
+// Command: set_analyze_option -auto
+// Command: set_analyze_option -auto
+0
+// Command: write_hier_compare_dofile hier_tmp3.lec.do -noexact_pin_match -constraint -usage -replace -balanced_extraction -input_output_pin_equivalence -prepend_string " analyze_datapath -module -verbose ; analyze_datapath   -verbose; "
+// Command: write_hier_compare_dofile hier_tmp3.lec.do -noexact_pin_match -constraint -usage -replace -balanced_extraction -input_output_pin_equivalence -prepend_string { analyze_datapath -module -verbose ; analyze_datapath   -verbose; }
+// Flattening Golden and Revised designs ...
+// Command: usage
+CPU time     : 11.43   seconds
+Memory usage : 168.85  M bytes
+// Starting hierarchical dofile generation ...
+// Total Matching Module Instance Pairs =  1
+// Module Instantiation Ratio in Golden = 1.00
+// Module Instantiation Ratio in Revised = 1.00
+// Gathering Instance Boundary Information ...
+// Extracting Constraints in Golden ...
+// Extracting Constraints in Revised ...
+// Balancing Constraints ...
+// Resolving Constraints ...
+// Writing hierarchical dofile ...
+1 module pairs are written for hierarchical comparison
+0
+CPU time     : 11.77   seconds
+Elapse time  : 26      seconds
+Memory usage : 175.36  M bytes
+// Command: run_hier_compare hier_tmp3.lec.do -dynamic_hierarchy
+// Command: run_hier_compare hier_tmp3.lec.do -dynamic_hierarchy
+// Command: vpxmode
+// Command: delete set_seq_merge
+// Command: set_seq_merge /o_copro_crm_reg[0]  /o_rm_sel_reg[0] -Golden
+// Command: set_seq_merge /o_copro_crm_reg[1]  /o_rm_sel_reg[1] -Golden
+// Command: set_seq_merge /o_copro_crm_reg[2]  /o_rm_sel_reg[2] -Golden
+// Command: set_seq_merge /o_copro_crm_reg[3]  /o_rm_sel_reg[3] -Golden
+// Command: set_seq_merge /o_copro_num_reg[0]  /o_imm_shift_amount_reg[1] -Golden
+// Command: set_seq_merge /o_copro_num_reg[1]  /o_imm_shift_amount_reg[2] -Golden
+// Command: set_seq_merge /o_copro_num_reg[2]  /o_imm_shift_amount_reg[3] -Golden
+// Command: set_seq_merge /o_copro_num_reg[3]  /o_imm_shift_amount_reg[4] -Golden
+// Command: set_seq_merge /o_copro_opcode2_reg[2]  /o_imm_shift_amount_reg[0] -Golden
+// Command: set_seq_merge /o_status_bits_irq_mask_wen_reg  /o_status_bits_mode_wen_reg -Golden
+// Command: tclmode
+// Running Module a23_decode and a23_decode
+// Command: set_root_module a23_decode -Golden
+// Warning: Golden root module is already at 'a23_decode'
+0
+// Command: set_root_module a23_decode -Revised
+// Warning: Revised root module is already at 'a23_decode'
+0
+// Command: set_module_property -instance / -Golden
+0
+// Command: set_module_property -instance / -Revised
+0
+// Command: report_black_box -NOHidden
+0
+// Command: set_system_mode lec
+// Processing Golden ...
+// Modeling Golden ...
+// (F21) Merged 10 DFF/DLAT(s) due to added instance equivalences (flatten)
+// Processing Revised ...
+// Modeling Revised ...
+// Balanced modeling (auto) mapped 734 out of 749 DFF/DLATs
+// (F18) Converted 1 DFF/DLAT(s) in (G) to ZERO/ONE
+CPU time     : 12.38   seconds
+Elapse time  : 27      seconds
+Memory usage : 182.39  M bytes
+// Warning: Golden and Revised have different numbers of key points:
+// Golden  key points = 739
+// Revised key points = 724
+// Mapping key points ...
+// Warning: Golden has 4 unmapped key points
+================================================================================
+Mapped points: SYSTEM class
+--------------------------------------------------------------------------------
+Mapped points     PI     PO     DFF       Total   
+--------------------------------------------------------------------------------
+Golden            88     269    367       724     
+--------------------------------------------------------------------------------
+Revised           88     269    367       724     
+================================================================================
+// Note: A key point group is counted as one key point
+// Golden has 10 key point groups
+Unmapped points:
+================================================================================
+Golden:
+--------------------------------------------------------------------------------
+Unmapped points   DFF       Total   
+--------------------------------------------------------------------------------
+Unreachable       1         1       
+Not-mapped        4         4       
+================================================================================
+// Warning: Key point mapping is incomplete
+CPU time     : 12.65   seconds
+Elapse time  : 27      seconds
+Memory usage : 182.40  M bytes
+// Running automatic setup...
+// Automatic setup finished.
+0
+CPU time     : 12.95   seconds
+Elapse time  : 27      seconds
+Memory usage : 182.48  M bytes
+// Command: analyze_datapath -module -verbose
+// Note: Multithreaded module datapath analysis (MDP) is enabled
+// Warning: No eligible datapath module in the design. Skip ...
+// Command: analyze_datapath -verbose
+// Note: add_595_57(clustered): quality evaluated 100% success
+0
+CPU time     : 13.22   seconds
+Elapse time  : 28      seconds
+Memory usage : 183.37  M bytes
+// Command: add_compared_points -all
+// Warning: Golden has 4 unmapped key points which will not be compared
+// 636 compared points added to compare list
+0
+// Command: compare -noneq_stop 1  -threads 4,4
+// Compare will stop on the 1st non-equivalent point
+================================================================================
+Compared points      PO     DFF       Total   
+--------------------------------------------------------------------------------
+Equivalent           269    367       636     
+================================================================================
+Compare results of instance/output/pin equivalences and/or sequential merge      
+================================================================================
+Compared points      DFF       Total   
+--------------------------------------------------------------------------------
+Equivalent           10        10      
+================================================================================
+CPU time     : 27.21   seconds
+Elapse time  : 38      seconds
+Memory usage : 183.51  M bytes
+// Command: analyze abort -compare
+There is no abort/specified point to be analyzed.
+// Command: save_hier_compare_result
+0
+CPU time     : 27.34   seconds
+Elapse time  : 38      seconds
+Memory usage : 183.57  M bytes
+// Command: set_system_mode setup
+0
+// Command: usage
+CPU time     : 27.34   seconds
+Memory usage : 183.57  M bytes
+0
+Processed 1 out of 1 module pairs	EQ: 1	NEQ: 0	ABORT: 0
+
+================================================================================
+Module Comparison Results
+--------------------------------------------------------------------------------
+Equivalent                     1
+--------------------------------------------------------------------------------
+Total                          1
+--------------------------------------------------------------------------------
+Hierarchical compare : Equivalent 
+================================================================================
+0
+// Command: report_verification -hier -verbose
+// Command: report_verification -hier -verbose
+================================================================================
+                            Verification Report
+--------------------------------------------------------------------------------
+Category                                                                  Count
+--------------------------------------------------------------------------------
+1. Non-standard modeling options used:                                      0
+     Tri-stated output:                                        checked
+     Revised X signals set to E:                               yes
+     Floating signals tied to Z:                               yes
+     Command "add clock" for clock-gating:                     not used
+--------------------------------------------------------------------------------
+2. Incomplete verification:                                                 0
+     All primary outputs are mapped:                           yes
+     Not-mapped DFF/DLAT is detected:                          no
+     All mapped points are added as compare points:            yes
+     All compared points are compared:                         yes
+     User added black box:                                     no
+     Black box mapped with different module name:              no
+     Empty module is not black boxed:                          no
+     Command "add ignore outputs" used:                        no
+     Always false constraints detected:                        no
+--------------------------------------------------------------------------------
+3. User modification to design:                                             0
+     Change gate type:                                         no
+     Change wire:                                              no
+     Primary input added by user:                              no
+--------------------------------------------------------------------------------
+4. Conformal Constraint Designer clock domain crossing checks recommended:  0
+     Multiple clocks in the design:                            no
+--------------------------------------------------------------------------------
+5. Design ambiguity:                                                        0
+     Duplicate module definition:                              no
+     Black box due to undefined cells:                         no
+     Golden design has abnormal ratio of unreachable gates:    no
+     Ratio of golden unreachable gates:                        0%
+     Revised design has abnormal ratio of unreachable gates:   no
+     Ratio of revised unreachable gates:                       0%
+     All primary input bus ordering is consistent:             yes
+     All primary output bus ordering is consistent:            yes
+     DFF/DLAT not compared due to disabled clock port(s):        0
+--------------------------------------------------------------------------------
+6. Compare Results:                                                        PASS
+     Number of EQ compare points:                              646
+     Number of NON-EQ compare points:                          0
+     Number of Aborted compare points:                         0
+     Number of Uncompared compare points :                     0
+================================================================================
+pass
+// Command: set_system_mode lec
+// Command: set_system_mode lec
+0
+// Command: puts "No of diff points    = [get_compare_points -NONequivalent -count]"
+// Command: get_compare_points -NONequivalent -count
+No of diff points    = 0
+// Command: if {[get_compare_points -NONequivalent -count] > 0} {
+//              puts "------------------------------------"
+//              puts "ERROR: Different Key Points detected"
+//              puts "------------------------------------"
+//          }
+// Command: get_compare_points -NONequivalent -count
+// Command: write_verification_information
+// Command: write_verification_information
+// Verification information is written to rtl_fv_map_db.
+0
+// Command: report_verification_information
+// Command: report_verification_information
+// Generating reports on verification information at /home/vvtrainee43/Desktop/chandan/lec/amber_lvt_250/work2/rtl_fv_map_db...
+LEC run scores:
+================================================================================
+Step                Score     Range          
+--------------------------------------------------------------------------------
+result_status       10        10             
+runtime             10        10             
+mapping             10        10             
+sequential_constant 10        10             
+sequential_merge    10        10             
+sequential_phase    10        10             
+datapath_analysis   5         10             
+combinational_loop  5         10             
+mismatch_detection  5         10             
+overall             75        90             
+================================================================================
+LEC results versus attributes:
+================================================================================
+Attribute           Total     Inconsistency  Combined Table                
+--------------------------------------------------------------------------------
+sequential_constant 1         0              sequential_constant.json      
+sequential_merge    10        0              sequential_merge.json         
+sequential_phase    367       0              sequential_phase.json         
+================================================================================
+The tables can be viewed directly using web interface.
+// Done with reporting verification information.
+0
+// Command: tclmode
+// Command: tclmode
+In Tcl mode already.
+// Command: puts "No of compare points = [get_compare_points -count]"
+// Command: get_compare_points -count
+No of compare points = 646
+// Command: puts "No of diff points    = [get_compare_points -NONequivalent -count]"
+// Command: get_compare_points -NONequivalent -count
+No of diff points    = 0
+// Command: puts "No of abort points   = [get_compare_points -abort -count]"
+// Command: get_compare_points -abort -count
+No of abort points   = 0
+// Command: puts "No of unknown points = [get_compare_points -unknown -count]"
+// Command: get_compare_points -unknown -count
+No of unknown points = 0
+// Command: if {[get_compare_points -count] == 0} {
+//              puts "---------------------------------"
+//              puts "ERROR: No compare points detected"
+//              puts "---------------------------------"
+//          }
+// Command: get_compare_points -count
+// Command: if {[get_compare_points -NONequivalent -count] > 0} {
+//              puts "------------------------------------"
+//              puts "ERROR: Different Key Points detected"
+//              puts "------------------------------------"
+//          }
+// Command: get_compare_points -NONequivalent -count
+// Command: if {[get_compare_points -abort -count] > 0} {
+//              puts "-----------------------------"
+//              puts "ERROR: Abort Points detected "
+//              puts "-----------------------------"
+//          }
+// Command: get_compare_points -abort -count
+// Command: if {[get_compare_points -unknown -count] > 0} {
+//              puts "----------------------------------"
+//              puts "ERROR: Unknown Key Points detected"
+//              puts "----------------------------------"
+//          }
+// Command: get_compare_points -unknown -count
+// Command: vpxmode
+// Command: vpxmode
+// Command: analyze setup -verbose
+// Info: analyze setup is skipped because compare has been done and there are no
+//       non-equivalences.
+// Command: analyze datapath
+// Command: add compare points -all
+// Compare list already has 636 compared points
+// 0 compared points added to compare list
+// Command: compare
+================================================================================
+Compared points      PO     DFF       Total   
+--------------------------------------------------------------------------------
+Equivalent           269    367       636     
+================================================================================
+Compare results of instance/output/pin equivalences and/or sequential merge      
+================================================================================
+Compared points      DFF       Total   
+--------------------------------------------------------------------------------
+Equivalent           10        10      
+================================================================================
+// Command: report unmapped points
+Unmapped point (unreachable: all paths to outputs are blocked):
+  (G)   361  DFF  /address_sel_r_reg[3]
+Unmapped point (extra):
+  (G)   499  DFF  /saved_current_instruction_reg[31]
+Unmapped point (extra):
+  (G)   500  DFF  /saved_current_instruction_reg[30]
+Unmapped point (extra):
+  (G)   501  DFF  /saved_current_instruction_reg[29]
+Unmapped point (extra):
+  (G)   502  DFF  /saved_current_instruction_reg[28]
+
+5 unmapped points reported
+================================================================================
+Golden:
+--------------------------------------------------------------------------------
+Unmapped points   DFF       Total   
+--------------------------------------------------------------------------------
+Extra             4         4       
+Unreachable       1         1       
+================================================================================
+// Command: analyze gate 361 -verbose -golden
+(G)    361  DFF /address_sel_r_reg[3]
+================================================================================
+Source information
+--------------------------------------------------------------------------------
+Module: a23_decode; Instance: address_sel_r_reg[3]; Source: /home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/rtl/a23_decode.v:1613,1
+================================================================================
+Modeling messages
+--------------------------------------------------------------------------------
+F18: Converted DFF/DLAT(s) to ZERO/ONE: DFF /address_sel_r_reg[3] (ZERO): data evaluated to 0 (set flatten model)
+================================================================================
+Mapping messages
+--------------------------------------------------------------------------------
+Gate is not a mapped point.
+================================================================================
+Compare messages
+--------------------------------------------------------------------------------
+Compare data is not applicable because gate is not mapped.
+================================================================================
+RTL rule messages
+--------------------------------------------------------------------------------
+RTL8.3: a23_decode/status_bits_firq_mask_r_reg on line 1613 in file '/home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/rtl/a23_decode.v'
+RTL8.3: a23_decode/status_bits_irq_mask_r_reg on line 1613 in file '/home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/rtl/a23_decode.v'
+================================================================================
+================================================================================
+Constant tracing
+--------------------------------------------------------------------------------
+Sources of constant:
+--------------------------------------------------------------------------------
+(G)   966      ZERO /U$495/Z[3]: (/home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/rtl/a23_decode.v:1366)
+--------------------------------------------------------------------------------
+Fanin cone tracing:
+--------------------------------------------------------------------------------
+(G) 361 DFF /address_sel_r_reg[3]: data evaluated to 0
+|-(G) 740 MUX /U$3/U$4: (L0)
+  |-(G) 966 ZERO /U$495/Z[3]: (/home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/rtl/a23_decode.v:1366)
+================================================================================
+
+Analyzing support points ...
+================================================================================
+Support points
+--------------------------------------------------------------------------------
+Support points have sequential constant 0: 361 DFF address_sel_r_reg[3], data evaluated to 0
+--------------------------------------------------------------------------------
+1 out of 1 support point is mapped by name
+--------------------------------------------------------------------------------
+Support point '(G) 361 DFF address_sel_r_reg[3]' is optimized to sequential constant 0 without corresponding synthesis information
+================================================================================
+// Command: report unmapped points -summary
+================================================================================
+Golden:
+--------------------------------------------------------------------------------
+Unmapped points   DFF       Total   
+--------------------------------------------------------------------------------
+Extra             4         4       
+Unreachable       1         1       
+================================================================================
+// Command: report unmapped points -extra -unreachable -not mapped
+// Error: Unknown option mapped.
+// Command: report unmapped points -extra -unreachable -notmapped
+Unmapped point (unreachable: all paths to outputs are blocked):
+  (G)   361  DFF  /address_sel_r_reg[3]
+Unmapped point (extra):
+  (G)   499  DFF  /saved_current_instruction_reg[31]
+Unmapped point (extra):
+  (G)   500  DFF  /saved_current_instruction_reg[30]
+Unmapped point (extra):
+  (G)   501  DFF  /saved_current_instruction_reg[29]
+Unmapped point (extra):
+  (G)   502  DFF  /saved_current_instruction_reg[28]
+
+5 unmapped points reported
+================================================================================
+Golden:
+--------------------------------------------------------------------------------
+Unmapped points   DFF       Total   
+--------------------------------------------------------------------------------
+Extra             4         4       
+Unreachable       1         1       
+================================================================================
+// Command: analyze gate 361 -verbose -golden
+(G)    361  DFF /address_sel_r_reg[3]
+================================================================================
+Source information
+--------------------------------------------------------------------------------
+Module: a23_decode; Instance: address_sel_r_reg[3]; Source: /home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/rtl/a23_decode.v:1613,1
+================================================================================
+Modeling messages
+--------------------------------------------------------------------------------
+F18: Converted DFF/DLAT(s) to ZERO/ONE: DFF /address_sel_r_reg[3] (ZERO): data evaluated to 0 (set flatten model)
+================================================================================
+Mapping messages
+--------------------------------------------------------------------------------
+Gate is not a mapped point.
+================================================================================
+Compare messages
+--------------------------------------------------------------------------------
+Compare data is not applicable because gate is not mapped.
+================================================================================
+RTL rule messages
+--------------------------------------------------------------------------------
+RTL8.3: a23_decode/status_bits_firq_mask_r_reg on line 1613 in file '/home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/rtl/a23_decode.v'
+RTL8.3: a23_decode/status_bits_irq_mask_r_reg on line 1613 in file '/home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/rtl/a23_decode.v'
+================================================================================
+================================================================================
+Constant tracing
+--------------------------------------------------------------------------------
+Sources of constant:
+--------------------------------------------------------------------------------
+(G)   966      ZERO /U$495/Z[3]: (/home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/rtl/a23_decode.v:1366)
+--------------------------------------------------------------------------------
+Fanin cone tracing:
+--------------------------------------------------------------------------------
+(G) 361 DFF /address_sel_r_reg[3]: data evaluated to 0
+|-(G) 740 MUX /U$3/U$4: (L0)
+  |-(G) 966 ZERO /U$495/Z[3]: (/home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/rtl/a23_decode.v:1366)
+================================================================================
+
+Analyzing support points ...
+================================================================================
+Support points
+--------------------------------------------------------------------------------
+Support points have sequential constant 0: 361 DFF address_sel_r_reg[3], data evaluated to 0
+--------------------------------------------------------------------------------
+1 out of 1 support point is mapped by name
+--------------------------------------------------------------------------------
+Support point '(G) 361 DFF address_sel_r_reg[3]' is optimized to sequential constant 0 without corresponding synthesis information
+================================================================================
+// Command: analyze gate address_sel_r_reg[3]
+(G)    361  DFF /address_sel_r_reg[3]
+================================================================================
+Source information
+--------------------------------------------------------------------------------
+Module: a23_decode; Instance: address_sel_r_reg[3]; Source: /home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/rtl/a23_decode.v:1613,1
+================================================================================
+Modeling messages
+--------------------------------------------------------------------------------
+F18: Converted DFF/DLAT(s) to ZERO/ONE: DFF /address_sel_r_reg[3] (ZERO): data evaluated to 0 (set flatten model)
+================================================================================
+Mapping messages
+--------------------------------------------------------------------------------
+Gate is not a mapped point.
+================================================================================
+Compare messages
+--------------------------------------------------------------------------------
+Compare data is not applicable because gate is not mapped.
+================================================================================
+RTL rule messages
+--------------------------------------------------------------------------------
+RTL8.3: a23_decode/status_bits_firq_mask_r_reg on line 1613 in file '/home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/rtl/a23_decode.v'
+RTL8.3: a23_decode/status_bits_irq_mask_r_reg on line 1613 in file '/home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/rtl/a23_decode.v'
+================================================================================
+================================================================================
+Constant tracing
+--------------------------------------------------------------------------------
+Sources of constant:
+--------------------------------------------------------------------------------
+(G)   966      ZERO /U$495/Z[3]: (/home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/rtl/a23_decode.v:1366)
+--------------------------------------------------------------------------------
+Fanin cone tracing:
+--------------------------------------------------------------------------------
+(G) 361 DFF /address_sel_r_reg[3]: data evaluated to 0
+|-(G) 740 MUX /U$3/U$4: (L0)
+  |-(G) 966 ZERO /U$495/Z[3]: (/home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/rtl/a23_decode.v:1366)
+================================================================================
+
+Analyzing support points ...
+================================================================================
+Support points
+--------------------------------------------------------------------------------
+Support points have sequential constant 0: 361 DFF address_sel_r_reg[3], data evaluated to 0
+--------------------------------------------------------------------------------
+1 out of 1 support point is mapped by name
+--------------------------------------------------------------------------------
+Support point '(G) 361 DFF address_sel_r_reg[3]' is optimized to sequential constant 0 without corresponding synthesis information
+================================================================================
+// Command: set flatten model -seq_constant
+// Error: This command is not allowed in current system mode.
+// Error: This command is only allowed in SETUP mode.
+// Command: analyze gate saved_current_instruction_reg[28] -golden
+(G)    502  DFF /saved_current_instruction_reg[28]
+================================================================================
+Source information
+--------------------------------------------------------------------------------
+Module: a23_decode; Instance: saved_current_instruction_reg[28]; Source: /home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/rtl/a23_decode.v:1681,1
+================================================================================
+Mapping messages
+--------------------------------------------------------------------------------
+Gate is not a mapped point.
+================================================================================
+Compare messages
+--------------------------------------------------------------------------------
+Compare data is not applicable because gate is not mapped.
+================================================================================
+================================================================================
+Sequential constant analysis
+--------------------------------------------------------------------------------
+Gate is proved not a sequential constant
+================================================================================
+False: sequential constant 0
+     * 'R'  is evaluated to 0
+       'S'  is evaluated to 0
+     * 'D'  is active (can be either 0 or 1)
+--------------------------------------------------------------------------------
+False: sequential constant 1
+       'R'  is evaluated to 0
+     * 'S'  is evaluated to 0
+     * 'D'  is active (can be either 0 or 1)
+================================================================================
+
+Analyzing support points ...
+================================================================================
+Support points
+--------------------------------------------------------------------------------
+97 out of 98 support points are mapped by name
+1 out of 98 support points is extra
+================================================================================
+// Command: analyze gate saved_current_instruction_reg[31] -golden
+(G)    499  DFF /saved_current_instruction_reg[31]
+================================================================================
+Source information
+--------------------------------------------------------------------------------
+Module: a23_decode; Instance: saved_current_instruction_reg[31]; Source: /home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/rtl/a23_decode.v:1681,1
+================================================================================
+Mapping messages
+--------------------------------------------------------------------------------
+Gate is not a mapped point.
+================================================================================
+Compare messages
+--------------------------------------------------------------------------------
+Compare data is not applicable because gate is not mapped.
+================================================================================
+================================================================================
+Sequential constant analysis
+--------------------------------------------------------------------------------
+Gate is proved not a sequential constant
+================================================================================
+False: sequential constant 0
+     * 'R'  is evaluated to 0
+       'S'  is evaluated to 0
+     * 'D'  is active (can be either 0 or 1)
+--------------------------------------------------------------------------------
+False: sequential constant 1
+       'R'  is evaluated to 0
+     * 'S'  is evaluated to 0
+     * 'D'  is active (can be either 0 or 1)
+================================================================================
+
+Analyzing support points ...
+================================================================================
+Support points
+--------------------------------------------------------------------------------
+97 out of 98 support points are mapped by name
+1 out of 98 support points is extra
+================================================================================
+// Command: analyze gate saved_current_instruction_reg[31] -verbose -golden
+(G)    499  DFF /saved_current_instruction_reg[31]
+================================================================================
+Source information
+--------------------------------------------------------------------------------
+Module: a23_decode; Instance: saved_current_instruction_reg[31]; Source: /home/vv2trainee16/PNR_INNOVUS/amber_lvt_250/rtl/a23_decode.v:1681,1
+================================================================================
+Mapping messages
+--------------------------------------------------------------------------------
+Gate is not a mapped point.
+================================================================================
+Compare messages
+--------------------------------------------------------------------------------
+Compare data is not applicable because gate is not mapped.
+================================================================================
+================================================================================
+Sequential constant analysis
+--------------------------------------------------------------------------------
+Gate is proved not a sequential constant
+================================================================================
+False: sequential constant 0
+     * 'R'  is evaluated to 0
+       'S'  is evaluated to 0
+     * 'D'  is active (can be either 0 or 1)
+--------------------------------------------------------------------------------
+False: sequential constant 1
+       'R'  is evaluated to 0
+     * 'S'  is evaluated to 0
+     * 'D'  is active (can be either 0 or 1)
+================================================================================
+
+Analyzing support points ...
+================================================================================
+Support points
+--------------------------------------------------------------------------------
+97 out of 98 support points are mapped by name
+1 out of 98 support points is extra
+================================================================================
+// Command: analyze gate saved_current_instruction_reg[31] -support -golden
+// Error: Unknown option -support in command analyze gate saved_current_instruction_reg[31] -support -golden.
+// Command: find -revised saved_current_instruction_reg[31]
+// Error: Unknown command find -revised saved_current_instruction_reg[31].
+// Command: find -revised *saved_current_instruction_reg*
+// Error: Unknown command find -revised *saved_current_instruction_reg*.
+// Command: report compare points -unmapped
+// Error: Unknown option -unmapped.
+// Command: analyze gate saved_current_instruction_reg[31] -trace
+// Error: Unknown option -trace in command analyze gate saved_current_instruction_reg[31] -trace.
+// Command: report black_box
+// Error: Unknown command report black_box.
+// Command: report_black_box
+// Error: Unknown command report_black_box.
